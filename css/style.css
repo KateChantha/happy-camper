@@ -13,23 +13,34 @@ Dark green: #28b485
   box-sizing: border-box;
 }
 
+html {
+  /* EQ of 10px is 10px/16px = 62.5% */
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 /*  #9196909c,
-    #28b48574), */
+    #28b48574), 
+    night mode
+    #03242972,
+    #0a262bd7,
+*/
 .header {
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
     #6ae6fc8c,
     #9493913d),
+    /* #0a262bd7,
+    #241c0b3d), */
   url(../img/hero-02.jpg);
   background-size: cover;
   background-position: bottom;
@@ -40,10 +51,10 @@ body {
 
 .logo-box {
   position: relative;
-  /* top: 10px; */
-  /* left: 50px; */
+  /* top: 1rem; */
+  /* left: 5rem; */
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 
   animation-name: moveInRight;
   animation-duration: 2s;
@@ -51,7 +62,7 @@ body {
 }
 
 .logo {
-  height: 55px;
+  height: 5.5rem;
 }
 
 .text-box {
@@ -64,7 +75,7 @@ body {
 .heading-primary {
   color: rgb(194, 115, 115);
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 
   /* fix bug on jumpping animation */
   backface-visibility: hidden;
@@ -72,9 +83,9 @@ body {
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
   animation-duration: 2s;
@@ -83,9 +94,9 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
 
   /* short handed */
   animation: moveInLeft 2s ease-out;
@@ -95,11 +106,11 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -111,11 +122,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -127,7 +138,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -140,9 +151,10 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  font-size: 1.5rem;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 200px;
+  border-radius: 20rem;
   transition: all .2s;
   /* work for btn::after */
   position: relative;
@@ -150,18 +162,18 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
 }
 
 .btn-blue {
   background-color: #8acdd2;
   color: rgb(255, 255, 255);
-  /* font-size: 14px; */
+  /* font-size: 1.4rem; */
 }
 
 /* 
@@ -174,7 +186,7 @@ make a copy of blue button and place hidden behind the actual one
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
