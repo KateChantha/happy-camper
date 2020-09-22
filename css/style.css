@@ -57,10 +57,12 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
+  text-align: center;
 }
 .heading-primary {
   color: rgb(194, 115, 115);
   text-transform: uppercase;
+  margin-bottom: 30px;
 
   /* fix bug on jumpping animation */
   backface-visibility: hidden;
@@ -118,4 +120,30 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 200px;
+  transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.btn-white {
+  background-color: #a2cbce;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
 }
