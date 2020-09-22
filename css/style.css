@@ -124,6 +124,18 @@ body {
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -178,4 +190,10 @@ make a copy of blue button and place hidden behind the actual one
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .6s ease-out .65s;
+  /* prevent button from being visible before the animation start by applying initail state  */
+  animation-fill-mode: backwards;
 }
