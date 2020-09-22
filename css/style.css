@@ -28,7 +28,7 @@ body {
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
-    #a8f9f989,
+    #6ae6fc8c,
     #9493913d),
   url(../img/hero-02.jpg);
   background-size: cover;
@@ -132,6 +132,8 @@ body {
   display: inline-block;
   border-radius: 200px;
   transition: all .2s;
+  /* work for btn::after */
+  position: relative;
 }
 
 .btn:hover {
@@ -144,8 +146,36 @@ body {
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-.btn-white {
+.btn-blue {
   background-color: #8acdd2;
   color: rgb(255, 255, 255);
   /* font-size: 14px; */
+}
+
+/* 
+After Psudo Element
+make a copy of blue button and place hidden behind the actual one 
+*/
+.btn::after {
+  /* must be some content */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* initail state before ::hover */
+  transition: all 0.4s;
+}
+
+.btn-blue::after {
+  background-color: #8acdd2;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
