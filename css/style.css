@@ -22,24 +22,30 @@ body {
   padding: 30px;
 }
 
+/*  #9196909c,
+    #28b48574), */
 .header {
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
-    #9196909c,
-    #28b48574),
-  url(../img/hero.jpg);
+    #a8f9f989,
+    #9493913d),
+  url(../img/hero-02.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 }
 
 .logo-box {
   position: absolute;
   top: 40px;
   left: 40px;
+
+  animation-name: moveInRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
 }
 
 .logo {
@@ -53,7 +59,7 @@ body {
   transform: translate(-50%,-50%);
 }
 .heading-primary {
-  color: #fff;
+  color: rgb(194, 115, 115);
   text-transform: uppercase;
 
   /* fix bug on jumpping animation */
@@ -78,7 +84,7 @@ body {
   letter-spacing: 17.4px;
 
   /* short handed */
-  animation: moveInRight 2s ease-out;
+  animation: moveInLeft 2s ease-out;
 }
 
 /* Browser optimize for opcacity and transform */
