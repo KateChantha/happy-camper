@@ -7,6 +7,15 @@ Dark green: #28b485
 
 */
 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-white: #fff;
+$color-pink: rgb(194, 115, 115);
+$color-blue:#8acdd2;
+$color-grey-dark: #777;
+
 
 /* GLOBAL RESET */
 *,
@@ -27,26 +36,22 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
 
   box-sizing: border-box;
 }
 
-/*  #9196909c,
-    #28b48574), 
-    night mode
-    #03242972,
-    #0a262bd7,
-*/
 .header {
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
+    // rgba($color-primary-light,0.8),
+    // rgba($color-primary-dark,0.8),
     #6ae6fc8c,
     #9493913d),
-    /* #0a262bd7,
-    #241c0b3d), */
+    
+   
   url(../img/hero-02.jpg);
   background-size: cover;
   background-position: bottom;
@@ -79,7 +84,7 @@ body {
   text-align: center;
 }
 .heading-primary {
-  color: rgb(194, 115, 115);
+  color: $color-pink;
   text-transform: uppercase;
   margin-bottom: 3rem;
 
@@ -177,8 +182,8 @@ body {
 }
 
 .btn--blue {
-  background-color: #8acdd2;
-  color: rgb(255, 255, 255);
+  background-color: $color-blue;
+  color:$color-white;
   /* font-size: 1.4rem; */
 }
 
@@ -202,7 +207,7 @@ make a copy of blue button and place hidden behind the actual one
 }
 
 .btn--blue::after {
-  background-color: #8acdd2;
+  background-color: $color-blue;
 }
 
 .btn:hover::after {
