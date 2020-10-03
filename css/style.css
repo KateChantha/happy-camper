@@ -50,7 +50,7 @@ body {
   margin-bottom: 3rem;
   /* fix bug on jumpping animation */
   backface-visibility: hidden; }
-  .heading-primary-primary--main {
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -58,7 +58,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out; }
-  .heading-primary-primary--sub {
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
