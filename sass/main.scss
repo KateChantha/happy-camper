@@ -7,6 +7,8 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/button";
+
 @import "pages/home";
 
 
@@ -81,70 +83,5 @@
   
     /* short handed */
     animation: moveInLeft 2s ease-out;
-  }
-}
-
-.btn {
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.5rem;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 20rem;
-    transition: all .2s;
-    /* work for btn::after */
-    position: relative;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba($color-black,0.2);
-
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black,0.2);
-  }
-
-  &--blue {
-    background-color: $color-blue;
-    color:$color-white;
-    /* font-size: 1.4rem; */
-
-    &::after {
-      background-color: $color-blue;
-    }
-  }
-
-  &::after {
-    /* 
-    After Psudo Element
-    make a copy of blue button and place hidden behind the actual one 
-    */
-    /* must be some content */
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    /* initail state before ::hover */
-    transition: all 0.4s;
-  }
-
-  &--animated {
-    animation: moveInBottom .6s ease-out .65s;
-    /* prevent button from being visible before the animation start by applying initail state  */
-    animation-fill-mode: backwards;
   }
 }
