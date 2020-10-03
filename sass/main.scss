@@ -9,52 +9,12 @@
 
 @import "components/button";
 
+@import "layout/header";
+
 @import "pages/home";
 
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-    to right bottom, 
-    // rgba($color-primary-light,0.8),
-    // rgba($color-primary-dark,0.8),
-    #6ae6fc8c,
-    #9493913d),
-    
-   
-  url(../img/hero-02.jpg);
-  background-size: cover;
-  background-position: bottom;
-  position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-
-  &__logo-box {
-    position: relative;
-    /* top: 1rem; */
-    /* left: 5rem; */
-    align-items: center;
-    margin-bottom: 2rem;
-  
-    animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-  }
-
-  &__logo {
-    height: 5.5rem;
-  }
-  
-  &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-  }
-
-  
-}
 
 .heading-primary {
   color: $color-pink;
