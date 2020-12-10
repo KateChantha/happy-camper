@@ -22,6 +22,8 @@ $breakpoint argument choice
 - tab-port
 - tab-land
 - big-desktop
+
+ORDER of mixin: base + typography -> general layout + grid -> page layout -> component
 */
 // argument is passed from _base.scss -> @include respond(phone) {font-size: 50%;}
 // 1em = 16px
