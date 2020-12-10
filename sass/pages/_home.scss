@@ -4,6 +4,10 @@
   // accomodate a clip-path gap
   // header height 95vh - clip-path 85vh
   margin-top: -15vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+  }
 }
 
 .section-features {
@@ -23,5 +27,9 @@
 
   & > * {
     transform: skewY(5deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 15rem 0;
   }
 }
