@@ -5,3 +5,39 @@
     clear: both;
   }
 }
+
+
+//  MEDIA QUERY MANAGER = DESKTOP FIRST
+/*
+  0-600px:      phone
+  600-900px:    Tablet poetrait
+  900-1200px:   Tablet Lanscape
+  1200-1800px:  where is normal style apply
+  1800px +:     big desktop
+*/
+
+/*
+$breakpoint argument choice
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER of mixin: base + typography -> general layout + grid -> page layout -> component
+*/
+// argument is passed from _base.scss -> @include respond(phone) {font-size: 50%;}
+// 1em = 16px
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content } 
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) { @content }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) { @content }
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content }
+  }
+}
